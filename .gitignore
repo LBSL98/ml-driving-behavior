@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+.ipynb_checkpoints
+
+# Poetry
+.cache/
+.venv/
+poetry.lock
+
+# Data
+data/interim/
+data/features/
+*.parquet
+*.feather
+
+# Reports
+reports/figures/
+reports/tables/
+
+# MkDocs
+site/
+
+# OS/IDE
+.DS_Store
+*.swp
+.vscode/
