@@ -31,3 +31,22 @@ mkdocstrings-python = "^1.18.2"
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 100
+target-version = ["py311"]
+skip-string-normalization = true
+
+[tool.isort]
+profile = "black"
+line_length = 100
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+select = ["E","F","I","UP","B","C4","SIM"]
+ignore = ["E203","E266","E501"]
+exclude = ["site","data/raw","data/interim","data/features"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["src"]
