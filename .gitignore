@@ -9,7 +9,6 @@ __pycache__/
 # Poetry
 .cache/
 .venv/
-poetry.lock
 
 # Data
 data/interim/
