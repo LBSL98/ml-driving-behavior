@@ -1,6 +1,13 @@
 site_name: ML Driving Behavior
+repo_url: https://github.com/SEU_USUARIO/ml-driving-behavior
+repo_name: ml-driving-behavior
 theme:
   name: material
+  features:
+    - navigation.instant
+    - navigation.sections
+    - content.code.copy
+    - content.tabs.link
 plugins:
   - search
   - mkdocstrings:
@@ -8,8 +15,12 @@ plugins:
         python:
           options:
             docstring_style: google
+markdown_extensions:
+  - admonition
+  - attr_list
+  - toc:
+      permalink: true
 nav:
   - Home: index.md
   - Pipeline: pipeline.md
   - Experiments: experiments.md
-
