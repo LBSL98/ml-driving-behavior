@@ -27,3 +27,8 @@ site/
 .DS_Store
 *.swp
 .vscode/
+# Tool caches
+.ruff_cache/
+.mypy_cache/
+.pytest_cache/
+.ipynb_checkpoints/
