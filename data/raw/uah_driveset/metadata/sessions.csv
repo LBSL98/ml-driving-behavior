@@ -1,1 +1,5 @@
-driver_id,session_id,route_type,label,accel_path,gyro_path,gps_path,notes
+driver_id,session_id,route_type,label,accel_path,gyro_path,gps_path,video_path,notes
+# EXEMPLOS (apague estas linhas de comentário quando preencher de fato):
+# 1,S01,highway,normal,UAH-DRIVESET-v1/.../acc_xxx.csv,UAH-DRIVESET-v1/.../gyro_xxx.csv,UAH-DRIVESET-v1/.../gps_xxx.csv,,ok
+# 2,S07,secondary,drowsy,UAH-DRIVESET-v1/.../acc_xxx.csv,UAH-DRIVESET-v1/.../gyro_xxx.csv,UAH-DRIVESET-v1/.../gps_xxx.csv,,ok
+# 3,S13,highway,aggressive,UAH-DRIVESET-v1/.../acc_xxx.csv,UAH-DRIVESET-v1/.../gyro_xxx.csv,UAH-DRIVESET-v1/.../gps_xxx.csv,,ok
