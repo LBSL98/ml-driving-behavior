@@ -33,4 +33,7 @@ site/
 .pytest_cache/
 .ipynb_checkpoints/
 
+# Track only Parquet files in data/features (via LFS)
+!data/features/
+data/features/*
 !data/features/*.parquet
