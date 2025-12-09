@@ -1,0 +1,58 @@
+dataset:
+  name: uah_driveset
+  root: data/raw/uah_driveset
+  metadata: data/raw/uah_driveset/metadata/sessions.csv
+  sensors_dir: data/raw/uah_driveset/sensors
+
+segmentation:
+  window_seconds: 5
+  overlap: 0.5
+
+features:
+  use_axes: true
+  use_magnitude: true
+  time: [mean, std, rms, min, max, skew, kurt, zcr]
+  freq: [spectral_centroid, spectral_bandwidth, spectral_rolloff_0.85, spectral_entropy]
+  hjorth: [activity, mobility, complexity]
+
+labels:
+  classes: [normal, drowsy, aggressive]
+  column: label
+  group_column: driver_id
+
+preprocessing:
+  scale: standard
+
+reduction_scenarios:
+  - baseline
+  - pca
+  - lda
+  - pca_lda
+
+models:
+  rf:
+    class_weight: balanced
+    param_grid:
+      n_estimators: [200, 500]
+      max_depth: [null, 20]
+  knn:
+    param_grid:
+      n_neighbors: [5, 7, 11]
+      metric: [euclidean, manhattan]
+  dt:
+    class_weight: balanced
+    param_grid:
+      max_depth: [null, 20]
+      min_samples_leaf: [1, 5]
+  nb:
+    gaussian: true
+
+cv:
+  outer: lodo            # leave-one-driver-out
+  inner_splits: 5        # GroupKFold nos motoristas de treino
+  scoring: f1_macro
+
+outputs:
+  features_parquet: data/features/uah_driveset/features.parquet
+  tables_dir: reports/tables
+  figures_dir: reports/figures
