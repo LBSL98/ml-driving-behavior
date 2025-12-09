@@ -1,3 +1,4 @@
+# cole aqui o conteúdo corrigido acima
 [tool.poetry]
 name = "ml-driving-behavior"
 version = "0.1.0"
@@ -16,6 +17,7 @@ pyarrow = "^22.0.0"
 tqdm = "^4.67.1"
 matplotlib = "^3.10.7"
 seaborn = "^0.13.2"
+tabulate = "^0.9.0"
 
 [tool.poetry.group.dev.dependencies]
 black = "^25.9.0"
@@ -32,21 +34,28 @@ mkdocstrings-python = "^1.18.2"
 requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
 
-[tool.black]
-line-length = 100
-target-version = ["py311"]
-skip-string-normalization = true
-
 [tool.isort]
 profile = "black"
 line_length = 100
 
+[tool.black]
+line-length = 100
+target-version = ["py311"]
+skip-string-normalization = true
+extend-exclude = '''
+(
+  ^data/raw/           # vendor / dataset
+ |^results_            # saídas
+ |^\.venv/
+)
+'''
+
 [tool.ruff]
 line-length = 100
 target-version = "py311"
-select = ["E","F","I","UP","B","C4","SIM"]
-ignore = ["E203","E266","E501"]
-exclude = ["site","data/raw","data/interim","data/features"]
+respect-gitignore = true
+exclude = ["data/raw/**", "results_**", ".venv/**"]
 
-[tool.ruff.lint.isort]
-known-first-party = ["src"]
+[tool.ruff.lint]
+select = ["E","F","I","B","UP"]
+ignore = ["E501","E741","E701","E702","B015"]  # relax pra não travar

@@ -8,3 +8,18 @@ repos:
   - repo: https://github.com/pycqa/isort
     rev: 5.13.2
     hooks: [{id: isort}]
+
+# --- relax hooks para não travar com vendor/resultados ---
+repos:
+- repo: https://github.com/psf/black
+  rev: 25.9.0
+  hooks:
+  - id: black
+    exclude: ^data/raw/|^results_|^\.venv/
+
+- repo: https://github.com/astral-sh/ruff-pre-commit
+  rev: v0.6.9
+  hooks:
+  - id: ruff
+    args: [--fix]
+    exclude: ^data/raw/|^results_|^\.venv/

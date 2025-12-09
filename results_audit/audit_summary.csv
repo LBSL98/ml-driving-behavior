@@ -1,0 +1,12 @@
+item,value
+macro_f1_rf_5s,0.6169546753269836
+macro_f1_rf_10s,0.6499181611055526
+prauc_aggressive,0.7621361171043757
+prauc_drowsy,0.6704228258609022
+prauc_normal,0.6626972302781726
+macro_f1_default,0.6443539775665647
+macro_f1_tau,0.6432909278531619
+recall_drowsy_motorway_default,0.4625514403292181
+recall_drowsy_motorway_tau,0.6395061728395062
+recall_drowsy_secondary_default,0.5300127713920817
+recall_drowsy_secondary_tau,0.5210727969348659

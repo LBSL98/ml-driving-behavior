@@ -1,0 +1,27 @@
+== default ==
+macro_f1_overall=0.644354
+              precision    recall  f1-score   support
+
+  aggressive     0.7115    0.6315    0.6691      1593
+      drowsy     0.6819    0.4785    0.5624      1998
+      normal     0.6219    0.8047    0.7016      2637
+
+    accuracy                         0.6557      6228
+   macro avg     0.6718    0.6382    0.6444      6228
+weighted avg     0.6641    0.6557    0.6486      6228
+motorway: precision_drowsy=0.702564 recall_drowsy=0.451029 f1_drowsy=0.549373
+secondary: precision_drowsy=0.655949 recall_drowsy=0.521073 f1_drowsy=0.580783
+
+== tau_motorway ==
+macro_f1_overall=0.643291
+              precision    recall  f1-score   support
+
+  aggressive     0.7156    0.5970    0.6509      1593
+      drowsy     0.5979    0.5931    0.5955      1998
+      normal     0.6507    0.7198    0.6835      2637
+
+    accuracy                         0.6477      6228
+   macro avg     0.6547    0.6366    0.6433      6228
+weighted avg     0.6503    0.6477    0.6469      6228
+motorway: precision_drowsy=0.571324 recall_drowsy=0.639506 f1_drowsy=0.603495
+secondary: precision_drowsy=0.655949 recall_drowsy=0.521073 f1_drowsy=0.580783
