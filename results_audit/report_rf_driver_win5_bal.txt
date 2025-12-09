@@ -1,0 +1,14 @@
+precision    recall  f1-score   support
+
+  aggressive       0.67      0.60      0.63      3202
+      drowsy       0.66      0.45      0.53      4013
+      normal       0.60      0.79      0.68      5299
+
+    accuracy                           0.63     12514
+   macro avg       0.65      0.61      0.62     12514
+weighted avg       0.64      0.63      0.62     12514
+
+                 pred_aggressive  pred_drowsy  pred_normal
+true_aggressive             1912          288         1002
+true_drowsy                  441         1798         1774
+true_normal                  485          626         4188
