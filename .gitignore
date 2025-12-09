@@ -32,3 +32,5 @@ site/
 .mypy_cache/
 .pytest_cache/
 .ipynb_checkpoints/
+
+!data/features/*.parquet
